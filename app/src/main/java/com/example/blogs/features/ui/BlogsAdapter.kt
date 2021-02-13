@@ -11,7 +11,9 @@ import com.example.blogs.R
 import com.example.blogs.features.domain.Blog
 import kotlinx.android.synthetic.main.blog_list_item.view.*
 
-class BlogsAdapter : ListAdapter<Blog, BlogViewHolder>(BLOG_COMPARATOR) {
+class BlogsAdapter(
+        private val clickListener: OnBlogClickListener
+) : ListAdapter<Blog, BlogViewHolder>(BLOG_COMPARATOR) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BlogViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.blog_list_item, parent, false)
@@ -19,7 +21,7 @@ class BlogsAdapter : ListAdapter<Blog, BlogViewHolder>(BLOG_COMPARATOR) {
     }
 
     override fun onBindViewHolder(holder: BlogViewHolder, position: Int) {
-        holder.bind(getItem(position))
+        holder.bind(getItem(position), clickListener)
     }
 
     companion object {
@@ -35,12 +37,18 @@ class BlogsAdapter : ListAdapter<Blog, BlogViewHolder>(BLOG_COMPARATOR) {
     }
 }
 
+interface OnBlogClickListener {
+    fun onBlogClick(blog: Blog)
+}
 
 class BlogViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-    fun bind(blog: Blog) {
+    fun bind(blog: Blog, clickListener: OnBlogClickListener) {
         with(itemView) {
             Glide.with(blogImageImgV).load(blog.image).into(blogImageImgV)
             blogTitleTV.text = blog.title
+            setOnClickListener {
+                clickListener.onBlogClick(blog)
+            }
         }
     }
 }

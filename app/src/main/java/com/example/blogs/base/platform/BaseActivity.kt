@@ -6,8 +6,10 @@ import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
+import com.example.blogs.BuildConfig
 import com.example.blogs.R
 import com.example.blogs.base.utils.MessageUtils.showErrorMessage
+import com.example.blogs.base.utils.TestIdlingResource
 
 abstract class BaseActivity : AppCompatActivity() {
 
@@ -25,11 +27,17 @@ abstract class BaseActivity : AppCompatActivity() {
     }
 
     open fun showLoading() {
+        if (BuildConfig.DEBUG) {
+            TestIdlingResource.increment()
+        }
         hideKeyboard(this)
         alertDialog.show()
     }
 
     open fun hideLoading() {
+        if (BuildConfig.DEBUG) {
+            TestIdlingResource.decrement()
+        }
         alertDialog.dismiss()
     }
 

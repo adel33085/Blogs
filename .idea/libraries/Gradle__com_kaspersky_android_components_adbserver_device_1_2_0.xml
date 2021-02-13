@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.kaspersky.android-components:adbserver-device:1.2.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.kaspersky.android-components/adbserver-device/1.2.0/38e04ed480aa93d207ae9f11e7beed00ea28fed8/adbserver-device-1.2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.kaspersky.android-components/adbserver-device/1.2.0/32bc0deff9e47e30c5d36f51394d67ab2c50e0db/adbserver-device-1.2.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.kaspersky.android-components/adbserver-device/1.2.0/dc91f23e585b7e7a2ddd79a1cb4545ee17b49e68/adbserver-device-1.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

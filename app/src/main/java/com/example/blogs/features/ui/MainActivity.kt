@@ -1,19 +1,25 @@
 package com.example.blogs.features.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
 import com.example.blogs.R
 import com.example.blogs.base.platform.BaseActivity
 import com.example.blogs.base.utils.EventObserver
+import com.example.blogs.features.domain.Blog
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
 
 @AndroidEntryPoint
-class MainActivity : BaseActivity() {
+class MainActivity : BaseActivity(), OnBlogClickListener {
 
     private val viewModel: MainViewModel by viewModels()
-    private val adapter by lazy { BlogsAdapter() }
+    private val adapter by lazy { BlogsAdapter(this) }
+
+    companion object {
+        const val KEY_BLOG = "blog"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,5 +65,11 @@ class MainActivity : BaseActivity() {
                 }
             }
         })
+    }
+
+    override fun onBlogClick(blog: Blog) {
+        val intent = Intent(this, DetailsActivity::class.java)
+        intent.putExtra(KEY_BLOG, blog)
+        startActivity(intent)
     }
 }

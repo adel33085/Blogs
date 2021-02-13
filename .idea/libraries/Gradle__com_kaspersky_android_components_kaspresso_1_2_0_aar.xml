@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: com.kaspersky.android-components:kaspresso:1.2.0@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5923abb98513df3b25289fd6d57a9132/jetified-kaspresso-1.2.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5923abb98513df3b25289fd6d57a9132/jetified-kaspresso-1.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5923abb98513df3b25289fd6d57a9132/jetified-kaspresso-1.2.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5923abb98513df3b25289fd6d57a9132/jetified-kaspresso-1.2.0/jars/libs/allure-model.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.kaspersky.android-components/kaspresso/1.2.0/c7c95eb083d676b34d18febb51dc5e97bba8558e/kaspresso-1.2.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.kaspersky.android-components/kaspresso/1.2.0/f4a5baba9a4c413a26e71839a0efdfaf54e151ed/kaspresso-1.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
